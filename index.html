@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>REVIOR by GR | Verificación COA</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #F7F8F4;
+      color: #003F46;
+    }
+
+    header {
+      background: #ffffff;
+      text-align: center;
+      padding: 45px 20px 35px;
+      border-bottom: 4px solid #7BCB28;
+    }
+
+    .brand {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 0;
+      color: #003F46;
+    }
+
+    .brand span {
+      font-size: 18px;
+      font-weight: 600;
+      color: #00A8B5;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #5E6B6D;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px 60px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      text-align: center;
+      line-height: 1.6;
+      color: #5E6B6D;
+    }
+
+    .search-box {
+      max-width: 600px;
+      margin: 0 auto 35px;
+    }
+
+    #search {
+      width: 100%;
+      padding: 15px 18px;
+      font-size: 16px;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+    }
+
+    #search:focus {
+      border-color: #00A8B5;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid #e4e4e4;
+      transition: 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-2px);
+      border-color: #00A8B5;
+    }
+
+    .product-code {
+      font-size: 13px;
+      font-weight: bold;
+      color: #00A8B5;
+      margin-bottom: 5px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #003F46;
+    }
+
+    .product-mg {
+      font-size: 14px;
+      color: #5E6B6D;
+      margin-top: 4px;
+    }
+
+    .coa-status {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #5E6B6D;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #003F46;
+      color: white;
+      font-size: 13px;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 600px) {
+      .brand {
+        font-size: 30px;
+      }
+
+      main {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    REVIOR <span>BY GR</span>
+  </div>
+
+  <div class="subtitle">
+    Certificados de Análisis
+  </div>
+</header>
+
+<main>
+
+  <h1>Verificación de Producto</h1>
+
+  <div class="intro">
+    Consulte la documentación de análisis correspondiente al producto
+    y lote de REVIOR by GR.
+  </div>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="search"
+      placeholder="Buscar por producto o código..."
+      onkeyup="searchProducts()"
+    >
+  </div>
+
+  <div class="products" id="products">
+
+    <div class="product">
+      <div class="product-code">RT10</div>
+      <div class="product-name">RETA</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">RT20</div>
+      <div class="product-name">RETA</div>
+      <div class="product-mg">20 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">TR10</div>
+      <div class="product-name">TESA</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">TR20</div>
+      <div class="product-name">TESA</div>
+      <div class="product-mg">20 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">MS40</div>
+      <div class="product-name">MOTS-C</div>
+      <div class="product-mg">40 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">WL20</div>
+      <div class="product-name">WOLVERINE</div>
+      <div class="product-mg">20 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">CU100</div>
+      <div class="product-name">GHK-Cu</div>
+      <div class="product-mg">100 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">BC10</div>
+      <div class="product-name">BPC-157</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">S31</div>
+      <div class="product-name">SS-31</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">TY10</div>
+      <div class="product-name">THYMOSIN 1</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">P14</div>
+      <div class="product-name">PT-141</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">KL80</div>
+      <div class="product-name">KLOW</div>
+      <div class="product-mg">80 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">SX10</div>
+      <div class="product-name">SEMAX</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">SK10</div>
+      <div class="product-name">SELANK</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">DS10</div>
+      <div class="product-name">DSIP</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">ET10</div>
+      <div class="product-name">EPITALON</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+    <div class="product">
+      <div class="product-code">AD10</div>
+      <div class="product-name">AOD 9604</div>
+      <div class="product-mg">10 mg</div>
+      <div class="coa-status">COA por lote</div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <strong>REVIOR by GR</strong>
+  Verificación y trazabilidad de producto
+</footer>
+
+<script>
+  function searchProducts() {
+    const input = document.getElementById("search");
+    const filter = input.value.toUpperCase();
+    const products = document.getElementsByClassName("product");
+
+    for (let i = 0; i < products.length; i++) {
+      const text = products[i].innerText.toUpperCase();
+
+      if (text.indexOf(filter) > -1) {
+        products[i].style.display = "";
+      } else {
+        products[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
